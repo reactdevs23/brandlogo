@@ -1,0 +1,164 @@
+.authMain {
+  display: flex;
+}
+
+.authMain .left {
+  flex-grow: 1;
+}
+
+@media screen and (max-width: 1023px) {
+  .authMain {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .authMain .left {
+    width: 100%;
+    max-width: 402px;
+  }
+}
+
+.authMain .left .form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.authMain .left .form > * {
+  width: 100%;
+}
+
+@media screen and (max-width: 1023px) {
+  .authMain .left .form > * {
+    max-width: unset;
+  }
+}
+
+.authMain .left .form .actions {
+  display: flex;
+  gap: 24px;
+}
+
+.authMain .left .form .actions > * {
+  flex-grow: 1;
+  width: calc(50% - 24px);
+  justify-content: center;
+}
+
+@media screen and (max-width: 575px) {
+  .authMain .left .form .actions {
+    flex-direction: column;
+    gap: 12px;
+  }
+  .authMain .left .form .actions > * {
+    width: 100%;
+  }
+}
+
+.authMain .verticalLine {
+  width: 1px;
+  background-color: var(--color-bg-dark-2);
+  margin: 0 96px;
+}
+
+@media screen and (max-width: 1023px) {
+  .authMain .verticalLine {
+    margin: 0 30px;
+  }
+}
+
+.or {
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.or::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  height: 1px;
+  background-color: var(--color-bg-dark-2);
+}
+
+.orInner {
+  padding: 0 12px;
+  width: max-content;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-grey-text-light);
+  background-color: var(--color-bg-dark);
+  margin: 32px 0;
+  opacity: 0.5;
+  position: relative;
+  z-index: 1;
+}
+
+.authMain .left .btns {
+  display: flex;
+  gap: 12px;
+}
+
+.authMain .left .btns > * {
+  flex-grow: 1;
+  width: calc(50% - 12px);
+  justify-content: space-between;
+  color: var(--color-grey-text);
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+.authMain .left .btns > * > span {
+  flex-grow: 1;
+}
+
+.fullWidthBtn {
+  justify-content: center;
+}
+
+.termsCheck {
+  margin-top: 32px;
+}
+
+.termsCheck a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.phoneNumber {
+  display: flex;
+  gap: 8px;
+}
+
+.input {
+  flex-grow: 1;
+  max-width: unset;
+}
+
+.dropdownItem {
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  color: #fff;
+  width: 116px;
+  background-color: var(--color-bg-dark-3);
+  border: 1px solid var(--color-border-light);
+  border-radius: 8px;
+  height: 48px;
+  cursor: pointer;
+}
+
+.dropdownItem .icon {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%);
+}

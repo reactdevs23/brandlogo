@@ -1,0 +1,23 @@
+.sectionWrapper {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section {
+  max-width: 1300px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section.short {
+  max-width: 996px;
+}
+
+.section.xShort {
+  max-width: 448px;
+}
+
+.sectionWrapper.withPadding .section {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}

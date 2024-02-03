@@ -1,0 +1,65 @@
+.btn.sm {
+  height: 36px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 6px;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn.md {
+  height: 48px;
+  padding: 12px 20px;
+  border-radius: 8px;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.btn.lg {
+  height: 48px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  gap: 12px;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.btn {
+  box-shadow: var(--box-shadow-main);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  border: 0px;
+  cursor: pointer;
+  transition: 0.4s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+}
+
+.btn.btnPrimary {
+  color: #ffffff;
+  background: var(--color-primary);
+}
+
+.btn.btnBlack {
+  color: #ffffff;
+  background: var(--color-bg-dark-3);
+}
+
+.btn.btnMoreBlack {
+  color: #ffffff;
+  background: var(--color-bg-dark-2);
+}
+
+.btn.btnTransparent {
+  color: var(--color-primary);
+  background: transparent;
+}
+
+.btn.iconBtn {
+  padding-left: 8px;
+  padding-right: 8px;
+}

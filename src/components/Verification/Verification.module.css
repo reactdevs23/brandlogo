@@ -1,0 +1,96 @@
+.inputs {
+  margin: 56px 0 24px;
+}
+
+.input {
+  background-color: var(--color-bg-dark-3);
+  border: 1px solid var(--color-border-light);
+  border-radius: 12px;
+  padding: 18px;
+  text-align: center;
+  font-size: 24px;
+  outline: none;
+}
+
+@media screen and (min-width: 576px) {
+  .input {
+    width: 68px !important;
+    height: 68px !important;
+    margin-right: 8px !important;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .inputs > * {
+    justify-content: center;
+  }
+
+  .input {
+    width: 60px !important;
+    height: 60px !important;
+    margin-right: 4px !important;
+  }
+}
+
+@media screen and (max-width: 424px) {
+  .input {
+    width: 50px !important;
+    height: 50px !important;
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .input {
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+.hasError {
+  border-color: var(--color-red);
+}
+
+.helperError {
+  color: var(--color-red);
+  font-size: 16px;
+}
+
+/* .inputs */
+input::placeholder {
+  color: var(--color-grey-text-light);
+  opacity: 0.5;
+}
+
+.actions {
+  margin: 24px 0 56px;
+  display: flex;
+  gap: 24px;
+}
+
+.actions:not(.fullWidth) > * {
+  width: calc(50% - 24px);
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.actions.fullWidth > * {
+  width: 100%;
+  justify-content: center;
+}
+
+.resend {
+  background-color: transparent;
+  color: var(--color-grey-text-light);
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 500;
+  width: 100%;
+}
+
+.resend:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}

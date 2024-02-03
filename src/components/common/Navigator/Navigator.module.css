@@ -1,0 +1,10 @@
+.navigator {
+  text-align: center;
+  color: var(--color-primary);
+  margin-top: 32px;
+  text-decoration: underline;
+  display: block;
+}
+.navigator:hover {
+  text-decoration: none;
+}

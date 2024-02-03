@@ -1,0 +1,177 @@
+.navbar {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--color-bg-dark-2);
+  padding-left: 32px;
+  padding-right: 32px;
+}
+
+.navbar .mainLeft {
+  display: flex;
+  align-items: center;
+}
+
+@media screen and (max-width: 575px) {
+  .navbar {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .navbar .mainLeft img {
+    width: 130px;
+  }
+}
+
+.navbar .mainLeft .navigation {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-left: 1px solid var(--color-border-dark);
+  padding-left: 20px;
+  margin-left: 20px;
+}
+
+@media screen and (max-width: 1199px) {
+  .navbar .mainLeft .navigation {
+    display: none;
+  }
+}
+
+.navbar .mainLeft .navigation .link {
+  font-size: 14px;
+  transition: 0.4s ease;
+}
+
+.navbar .mainLeft .navigation .link:hover {
+  color: #fff;
+}
+
+.navbar .mainRight {
+  display: flex;
+  align-items: center;
+}
+.navbar .mainRight .navigation {
+  display: none;
+}
+
+.navbar .mainRight .buttons {
+  display: flex;
+  gap: 6px;
+  position: relative;
+}
+
+.navbar .mainRight .buttons.first {
+  padding-right: 20px;
+  margin-right: 20px;
+}
+
+.navbar .mainRight .buttons.first::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 20px;
+  width: 1px;
+  background-color: var(--color-border-dark);
+}
+
+.hamburger {
+  cursor: pointer;
+}
+
+@media screen and (min-width: 1200px) {
+  .hamburger,
+  .close {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .mainRightSm {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    cursor: pointer;
+  }
+
+  .mainRightSm {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .mainRightSm .independentBtns {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .darkOverlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 5;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  .darkOverlay.active {
+    opacity: 1;
+    pointer-events: all;
+  }
+
+  .navbar .mainRight {
+    position: fixed;
+    flex-direction: column;
+    height: 100vh;
+    right: -320px;
+    top: 0;
+    width: 320px;
+    padding: 40px 24px;
+    align-items: flex-start;
+    background-color: var(--color-bg-dark-2);
+    z-index: 5;
+    transition: 0.4s ease;
+  }
+
+  .navbar .mainRight.active {
+    right: 0;
+  }
+
+  .navbar .mainRight .navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .navbar .mainRight .buttons.first {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin: 24px 0;
+  }
+
+  .navbar .mainRight .buttons.first > * {
+    justify-content: center;
+  }
+
+  .navbar .mainRight .buttons.first::after {
+    display: none;
+  }
+
+  .navbar .mainRight .buttons.second {
+    display: none;
+  }
+}

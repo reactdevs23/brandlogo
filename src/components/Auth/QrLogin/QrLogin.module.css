@@ -1,0 +1,109 @@
+.qrLogin {
+  padding: 32px;
+  background-color: var(--color-bg-dark-3);
+  border-radius: 20px;
+  max-width: 402px;
+}
+
+@media screen and (max-width: 575px) {
+  .qrLogin {
+    padding: 32px 20px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .qrLogin {
+    width: 50%;
+  }
+}
+
+.qrLogin h2 {
+  margin-bottom: 12px;
+}
+
+.qrLogin h2,
+.qrLogin p {
+  text-align: center;
+}
+
+.qrLogin p {
+  color: var(--color-grey-text-light);
+}
+
+.qrLogin .download {
+  display: flex;
+  gap: 28px;
+}
+
+.qrLogin .download .left {
+  position: relative;
+  width: max-content;
+}
+
+@media screen and (max-width: 575px) {
+  .qrLogin .download {
+    flex-direction: column;
+  }
+
+  .qrLogin .download .left {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.qrLogin .download .left > img {
+  max-width: 100%;
+}
+
+.qrLogin .download .left > .btn {
+  background: var(--color-bg-dark-2);
+  box-shadow: var(--box-shadow-main);
+  width: 80px;
+  height: 48px;
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: none;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.qrLogin .download .right > h5 {
+  font-size: 16px;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+}
+
+@media screen and (max-width: 575px) {
+  .qrLogin .download .right .buttons {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.qrLogin .download .right .buttons h6 {
+  font-size: 10px;
+  font-weight: 400;
+  margin-bottom: 4px;
+  text-align: left;
+}
+
+.qrLogin .download .right .buttons > *:first-child {
+  margin-bottom: 8px;
+}
+
+.qrLogin .download .right .buttons h5 {
+  font-size: 16px;
+  font-weight: 500;
+  text-align: left;
+  color: #fff;
+}

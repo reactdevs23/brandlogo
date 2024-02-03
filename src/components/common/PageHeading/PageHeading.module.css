@@ -1,0 +1,25 @@
+.pageHeading {
+  text-align: center;
+}
+
+.pageHeading h4 {
+  margin-bottom: 12px;
+  font-size: 36px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.pageHeading h6 {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 1023px) {
+  .pageHeading h4 {
+    font-size: 26px;
+  }
+
+  .pageHeading h6 {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,54 @@
+.modalOverlay {
+  background-color: #17181c80;
+  backdrop-filter: blur(4px);
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 0;
+  z-index: 6;
+  transition: 0.4s ease;
+  pointer-events: none;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s ease;
+  z-index: 6;
+}
+
+.close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  cursor: pointer;
+}
+
+.xShort {
+  max-width: 452px;
+  width: calc(100% - 40px);
+}
+
+.modal.styled {
+  padding: 40px;
+  background-color: var(--color-bg-dark-2);
+  border: 1px solid var(--color-border-dark);
+  box-shadow: 0px 40px 64px -16px #0000001f;
+  border-radius: 20px;
+}
+
+.modalOverlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal.active {
+  pointer-events: all;
+  opacity: 1;
+}
