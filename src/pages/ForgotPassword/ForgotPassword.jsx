@@ -2,7 +2,7 @@ import Section from "components/common/Section/Section";
 import PageHeading from "components/common/PageHeading/PageHeading";
 import Navigator from "components/common/Navigator/Navigator";
 import Input from "components/common/Input/Input";
-import Button from "components/Button/Button";
+import Button from "components/common/Button/Button";
 import classes from "./ForgotPassword.module.css";
 
 const ForgotPassword = () => {

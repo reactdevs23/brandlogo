@@ -1,6 +1,6 @@
 .dontMiss {
   padding: 32px;
-  background-color: var(--color-bg-dark-3);
+  background-color: var(--base-400);
   border-radius: 20px;
   max-width: 402px;
 }
@@ -15,7 +15,7 @@
 }
 
 .dontMiss p {
-  color: var(--color-grey-text-light);
+  color: var(--base-100);
 }
 
 .dontMiss img {

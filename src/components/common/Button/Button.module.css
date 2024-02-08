@@ -32,7 +32,7 @@
   align-items: center;
   border: 0px;
   cursor: pointer;
-  transition: 0.4s ease;
+  transition: color, backgound-color, transform 0.4s ease;
 }
 
 .btn:hover {
@@ -46,12 +46,17 @@
 
 .btn.btnBlack {
   color: #ffffff;
-  background: var(--color-bg-dark-3);
+  background: var(--base-400);
+}
+
+.btn.black200 {
+  color: #ffffff;
+  background: var(--base-200);
 }
 
 .btn.btnMoreBlack {
   color: #ffffff;
-  background: var(--color-bg-dark-2);
+  background: var(--base-300);
 }
 
 .btn.btnTransparent {

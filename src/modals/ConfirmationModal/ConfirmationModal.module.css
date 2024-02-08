@@ -1,0 +1,30 @@
+.confirmationModal .text {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.confirmationModal img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.confirmationModal summary {
+  text-align: left;
+  color: var(--base-100);
+}
+
+.confirmationModal summary ul {
+  padding-left: 20px;
+  color: var(--base-100);
+}
+
+.confirmationModal summary ul li {
+  color: var(--base-100);
+}
+
+.confirmationModal .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}

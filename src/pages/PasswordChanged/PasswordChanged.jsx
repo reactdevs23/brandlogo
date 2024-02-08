@@ -1,6 +1,6 @@
 import Section from "components/common/Section/Section";
 import PageHeading from "components/common/PageHeading/PageHeading";
-import Button from "components/Button/Button";
+import Button from "components/common/Button/Button";
 import classes from "./PasswordChanged.module.css";
 import { passwordChanged } from "assets";
 

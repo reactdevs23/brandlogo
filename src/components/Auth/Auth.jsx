@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 import Section from "components/common/Section/Section";
@@ -6,36 +6,19 @@ import Hr from "components/common/Hr/Hr";
 import QrLogin from "components/Auth/QrLogin/QrLogin";
 import Tabs from "components/common/Tabs/Tabs";
 import Input from "components/common/Input/Input";
-import Button from "components/Button/Button";
+import Button from "components/common/Button/Button";
 import PageHeading from "components/common/PageHeading/PageHeading";
 import DontMiss from "./DontMiss/DontMiss";
 import Checkbox from "components/common/Checkbox/Checkbox";
-import { apple, dropdownArrow, google } from "assets";
+import { apple, google } from "assets";
 import classes from "./Auth.module.css";
 import Navigator from "components/common/Navigator/Navigator";
-import PhoneNumberDropdown from "components/common/PhoneNumberDropdown/PhoneNumberDropdown";
-import useOnClickOutside from "hooks/useOnClickOutside";
 import { countries } from "common/constants";
+import PhoneNumberInput from "components/common/PhoneNumberInput/PhoneNumberInput";
 
 const Auth = ({ isLoginForm }) => {
   const [selectedTabState, setSelectedTabState] = useState("Email Address");
-  const [isDropdownActive, setIsDropdownActive] = useState(false);
   const [selectedPhoneValue, setSelectedPhoneValue] = useState(countries[0]);
-  const dropdownRef = useRef(null);
-
-  function checkIfNumber(event) {
-    /**
-     * Allowing: Integers | Backspace | Tab | Delete | Left & Right arrow keys
-     **/
-
-    const regex = new RegExp(
-      /(^\d*$)|(Backspace|Tab|Delete|ArrowLeft|ArrowRight)/
-    );
-
-    return !event.key.match(regex) && event.preventDefault();
-  }
-
-  useOnClickOutside(dropdownRef, () => setIsDropdownActive(false));
 
   return (
     <Section withPadding className={classes.auth} short>
@@ -67,34 +50,10 @@ const Auth = ({ isLoginForm }) => {
 
           <form className={classes.form}>
             {selectedTabState === "Phone Number" ? (
-              <div className={classes.phoneNumber}>
-                <div ref={dropdownRef}>
-                  <PhoneNumberDropdown
-                    isActive={isDropdownActive}
-                    selectedValue={selectedPhoneValue}
-                    onSelect={(val) => {
-                      setSelectedPhoneValue(val);
-                      setIsDropdownActive(false);
-                    }}
-                  >
-                    <div
-                      className={classes.dropdownItem}
-                      onClick={() => {
-                        if (!isDropdownActive) setIsDropdownActive(true);
-                      }}
-                    >
-                      {selectedPhoneValue.code}
-                      <img src={dropdownArrow} alt="dropdown" />
-                    </div>
-                  </PhoneNumberDropdown>
-                </div>
-                <Input
-                  rootClassName={classes.input}
-                  onKeyDown={(event) => checkIfNumber(event)}
-                  type="number"
-                  placeholder="Phone number"
-                />
-              </div>
+              <PhoneNumberInput
+                selectedPhoneValue={selectedPhoneValue}
+                setSelectedPhoneValue={setSelectedPhoneValue}
+              />
             ) : (
               <Input type="email" placeholder="Email" />
             )}

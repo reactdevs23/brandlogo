@@ -2,31 +2,37 @@
 
 :root {
   --color-bg-dark: #17181c;
-  --color-bg-dark-2: #222327;
-  --color-bg-dark-3: #1d1e21;
-  --color-border-dark: #2a2b2f;
+  --base-300: #222327;
+  --base-400: #1d1e21;
+  --base-200: #2a2b2f;
   --color-border-light: #ffffff0d;
-  --color-grey-text: #c2c4c4;
-  --color-grey-text-light: #8a8c8d;
+  --base-50: #c2c4c4;
+  --base-100: #8a8c8d;
   --color-primary: #4b73ff;
   --color-red: #fa4b55;
+  --color-red-light: #fa4b551a;
+  --color-green: #17de8a;
+  --color-green-light: #17de8a1a;
   --box-shadow-main: 0px 2px 2px 0px #0000000f, 0px 1px 1px 0px #00000008;
 }
 
 * {
   box-sizing: border-box;
   text-decoration: none;
-  list-style-type: none;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-variation-settings: "slnt" 0;
-  color: var(--color-grey-text);
+  color: var(--base-50);
   margin: 0;
   padding: 0;
 }
 
 body {
   background-color: var(--color-bg-dark);
+}
+
+p {
+  line-height: 1.4;
 }
 
 h2,

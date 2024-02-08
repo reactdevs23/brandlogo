@@ -1,12 +1,16 @@
 import clsx from "clsx";
 import React, { useEffect, useState } from "react";
 import OTPInput, { ResendOTP } from "otp-input-react";
+import { AnimatePresence, motion } from "framer-motion";
 
 import Section from "components/common/Section/Section";
 import PageHeading from "components/common/PageHeading/PageHeading";
 import Navigator from "components/common/Navigator/Navigator";
-import Button from "components/Button/Button";
+import Button from "components/common/Button/Button";
 import classes from "./Verification.module.css";
+import Text2xl from "components/common/Text2xl/Text2xl";
+import TextRegular from "components/common/TextRegular/TextRegular";
+import { secured } from "assets";
 
 const renderButton = (buttonProps) => {
   return (
@@ -20,10 +24,13 @@ const renderButton = (buttonProps) => {
 const renderTime = () => React.Fragment;
 
 const Verification = ({
+  sm,
   noResend,
   title = "Login Verification",
   subTitle,
+  onVerify,
   redirect,
+  isActive = true,
 }) => {
   const [OTP, setOTP] = useState("");
   const [otpInvalid, setOtpInvalid] = useState(false);
@@ -34,12 +41,27 @@ const Verification = ({
   }, [OTP]);
 
   return (
-    <Section withPadding xShort className={classes.verificationMethod}>
-      <PageHeading heading={title} subHeading={subTitle} />
+    <Section
+      withPadding={!sm}
+      xShort
+      className={clsx(classes.verificationMethod, sm && classes.sm)}
+    >
+      {sm ? (
+        <>
+          <Text2xl className={classes.title}>{title}</Text2xl>
+          <TextRegular>{subTitle}</TextRegular>
+        </>
+      ) : (
+        <PageHeading heading={title} subHeading={subTitle} />
+      )}
 
-      <div className={classes.inputs}>
+      <div className={clsx(classes.inputs)}>
         <OTPInput
-          inputClassName={clsx(classes.input, otpInvalid && classes.hasError)}
+          inputClassName={clsx(
+            classes.input,
+            sm && classes.sm,
+            otpInvalid && classes.hasError
+          )}
           value={OTP}
           onChange={setOTP}
           autoFocus
@@ -56,15 +78,35 @@ const Verification = ({
       )}
 
       <div className={clsx(classes.actions, noResend && classes.fullWidth)}>
-        {!noResend && (
-          <ResendOTP renderButton={renderButton} renderTime={renderTime} />
-        )}
-        <Button to={redirect || "/forgot-password"} size="md" btnPrimary>
+        <AnimatePresence>
+          {!noResend && isActive && (
+            <motion.div
+              key={"resend-btn"}
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+            >
+              <ResendOTP renderButton={renderButton} renderTime={renderTime} />
+            </motion.div>
+          )}
+        </AnimatePresence>
+        <Button
+          to={redirect || (!onVerify && "/forgot-password")}
+          onClick={onVerify}
+          size="md"
+          btnPrimary
+        >
           Verify
         </Button>
       </div>
 
-      <Navigator to="/login">Back to Login</Navigator>
+      {sm ? (
+        <div className={classes.secured}>
+          <img src={secured} alt="secured" /> Secured By Brandname.
+        </div>
+      ) : (
+        <Navigator to="/login">Back to Login</Navigator>
+      )}
     </Section>
   );
 };

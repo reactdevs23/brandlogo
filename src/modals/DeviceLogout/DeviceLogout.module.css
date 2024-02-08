@@ -1,0 +1,16 @@
+.scanModal .text {
+  margin: 32px 0;
+  text-align: center;
+}
+
+.scanModal img {
+  max-width: 100%;
+  display: block;
+  margin: auto;
+}
+
+.scanModal .buttons {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}

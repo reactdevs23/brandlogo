@@ -1,0 +1,130 @@
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  background-color: var(--base-400);
+  border: 1px solid var(--base-300);
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.card .cardMain.mt {
+  margin-top: 24px;
+}
+
+.card .cardMain {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+@media screen and (max-width: 767px) {
+  .card .cardMain {
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
+
+.card .img {
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card .img img {
+  width: 28px;
+}
+
+.card .cardLeft {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  flex-grow: 1;
+}
+
+.card .second {
+  width: 140px;
+  flex-shrink: 0;
+  text-align: center;
+}
+
+@media screen and (max-width: 767px) {
+  .card .cardLeft {
+    width: 100%;
+  }
+
+  .card .second {
+    text-align: left;
+    width: auto;
+  }
+}
+
+.card .second .badge {
+  padding: 4px 8px;
+  border-radius: 6px;
+  width: 64px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 14px;
+  gap: 6px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 767px) {
+  .card .second .badge {
+    margin-left: 0;
+  }
+}
+
+.card .second .badge.danger {
+  color: var(--color-red);
+  background-color: var(--color-red-light);
+}
+
+.card .second .badge.success {
+  color: var(--color-green);
+  background-color: var(--color-green-light);
+}
+
+.card .second .badge.long {
+  width: 118px;
+}
+
+.card .title {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--base-100);
+  font-weight: 400;
+}
+
+.card p.short {
+  font-size: 12px;
+  color: var(--base-100);
+  font-weight: 400;
+}
+
+.card button.btn {
+  width: 90px;
+  height: 36px;
+  font-size: 14px;
+  flex-shrink: 0;
+  justify-content: center;
+}
+
+.textWhite {
+  color: #fff;
+}

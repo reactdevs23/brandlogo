@@ -1,0 +1,103 @@
+.accountInfo {
+  display: flex;
+  gap: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .accountInfo {
+    flex-direction: column;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .accountInfo > * {
+    width: 50%;
+  }
+}
+
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.label .tag {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  cursor: default;
+  user-select: none;
+}
+
+.label .tag.success span {
+  transition: 0.4s ease;
+}
+
+.label .tag.success span {
+  color: var(--color-green);
+}
+
+.label .tag.danger span {
+  color: var(--color-red);
+}
+
+.input {
+  width: 100%;
+  max-width: unset;
+}
+
+.info {
+  padding: 8px 16px 8px 16px;
+  border-radius: 8px;
+  border: 1px solid #ff9e2d;
+  border-width: 1px 1px 1px 3px;
+  gap: 10px;
+  color: #ff9e2d;
+  margin-top: 12px;
+  margin-bottom: 32px;
+}
+
+.uploader {
+  background-color: #1d1e21;
+  border-radius: 20px;
+  border: 1px solid #222327;
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+}
+
+.uploader .right .upload {
+  height: 36px;
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: 1px dashed #2a2b2f;
+  gap: 10px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  display: block;
+}
+
+.uploader .right input {
+  display: none;
+}
+
+.uploader .right .note {
+  font-size: 12px;
+  font-weight: 400;
+  color: #8a8c8d;
+  margin-top: 12px;
+}
+
+@media screen and (max-width: 575px) {
+  .uploader .placeholder {
+    width: 64px;
+  }
+}

@@ -29,7 +29,7 @@
   height: 20px;
   width: 20px;
   border-radius: 6px;
-  background-color: var(--color-bg-dark-2);
+  background-color: var(--base-300);
   box-shadow: var(--box-shadow-main);
   border: 1px solid var(--color-border-light);
 }

@@ -3,9 +3,11 @@ import classes from "./Section.module.css";
 
 const Section = ({
   className,
+  withPaddingShort,
   withPadding,
   xShort,
   short,
+  md,
   children,
   ...rest
 }) => {
@@ -14,6 +16,8 @@ const Section = ({
       className={clsx(
         classes.sectionWrapper,
         withPadding && classes.withPadding,
+        withPaddingShort && classes.withPaddingShort,
+        md && classes.md,
         className
       )}
       {...rest}

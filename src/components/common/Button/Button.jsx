@@ -6,6 +6,7 @@ import classes from "./Button.module.css";
 const Button = ({
   iconBtn,
   btnBlack,
+  black200,
   btnMoreBlack,
   btnPrimary,
   btnTransparent,
@@ -20,6 +21,7 @@ const Button = ({
     classes.btn,
     iconBtn && classes.iconBtn,
     size && classes[size],
+    black200 && classes.black200,
     btnBlack && classes.btnBlack,
     btnMoreBlack && classes.btnMoreBlack,
     btnPrimary && classes.btnPrimary,

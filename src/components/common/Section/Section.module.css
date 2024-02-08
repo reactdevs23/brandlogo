@@ -9,6 +9,10 @@
   margin-right: auto;
 }
 
+.section.md {
+  max-width: 1200px;
+}
+
 .section.short {
   max-width: 996px;
 }
@@ -20,4 +24,9 @@
 .sectionWrapper.withPadding .section {
   padding-top: 56px;
   padding-bottom: 56px;
+}
+
+.sectionWrapper.withPaddingShort .section {
+  padding-top: 40px;
+  padding-bottom: 40px;
 }

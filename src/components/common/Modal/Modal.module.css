@@ -20,6 +20,9 @@
   opacity: 0;
   pointer-events: none;
   transition: 0.4s ease;
+  width: calc(100% - 40px);
+  max-height: calc(100vh - 80px);
+  overflow: auto;
   z-index: 6;
 }
 
@@ -30,17 +33,26 @@
   cursor: pointer;
 }
 
+.short {
+  max-width: 480px;
+}
+
 .xShort {
   max-width: 452px;
-  width: calc(100% - 40px);
 }
 
 .modal.styled {
   padding: 40px;
-  background-color: var(--color-bg-dark-2);
-  border: 1px solid var(--color-border-dark);
+  background-color: var(--base-300);
+  border: 1px solid var(--base-200);
   box-shadow: 0px 40px 64px -16px #0000001f;
   border-radius: 20px;
+}
+
+@media screen and (max-width: 575px) {
+  .modal.styled {
+    padding: 20px;
+  }
 }
 
 .modalOverlay.active {

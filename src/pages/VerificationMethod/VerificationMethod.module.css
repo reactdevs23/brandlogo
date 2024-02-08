@@ -9,8 +9,8 @@
   cursor: pointer;
   border-radius: 12px;
   padding: 16px;
-  background-color: var(--color-bg-dark-3);
-  border: var(--color-bg-dark-2);
+  background-color: var(--base-400);
+  border: var(--base-300);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -31,7 +31,7 @@
 }
 
 .cards .card .left p {
-  color: var(--color-grey-text-light);
+  color: var(--base-100);
   font-size: 400;
   font-size: 14px;
 }

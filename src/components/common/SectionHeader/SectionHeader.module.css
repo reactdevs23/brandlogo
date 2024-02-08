@@ -1,0 +1,15 @@
+.header {
+  margin-bottom: 32px;
+}
+
+.header .title {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.header .subTitle {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--base-100);
+}

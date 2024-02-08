@@ -1,9 +1,28 @@
+.verificationMethod.sm {
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+
+.verificationMethod > * {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+.verificationMethod .title {
+  margin-bottom: 12px;
+}
+
 .inputs {
   margin: 56px 0 24px;
 }
 
+.verificationMethod.sm .inputs {
+  margin-top: 32px;
+}
+
 .input {
-  background-color: var(--color-bg-dark-3);
+  background-color: var(--base-400);
   border: 1px solid var(--color-border-light);
   border-radius: 12px;
   padding: 18px;
@@ -17,6 +36,11 @@
     width: 68px !important;
     height: 68px !important;
     margin-right: 8px !important;
+  }
+
+  .input.sm {
+    width: 60px !important;
+    height: 60px !important;
   }
 }
 
@@ -58,7 +82,7 @@
 
 /* .inputs */
 input::placeholder {
-  color: var(--color-grey-text-light);
+  color: var(--base-100);
   opacity: 0.5;
 }
 
@@ -68,8 +92,12 @@ input::placeholder {
   gap: 24px;
 }
 
+.verificationMethod.sm .actions {
+  margin-bottom: 32px;
+}
+
 .actions:not(.fullWidth) > * {
-  width: calc(50% - 24px);
+  width: calc(50% - 12px);
   justify-content: center;
   align-items: center;
   display: flex;
@@ -82,7 +110,7 @@ input::placeholder {
 
 .resend {
   background-color: transparent;
-  color: var(--color-grey-text-light);
+  color: var(--base-100);
   border: none;
   cursor: pointer;
   font-size: 16px;
@@ -93,4 +121,13 @@ input::placeholder {
 .resend:disabled {
   opacity: 0.5;
   pointer-events: none;
+}
+
+.secured {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--color-green);
 }

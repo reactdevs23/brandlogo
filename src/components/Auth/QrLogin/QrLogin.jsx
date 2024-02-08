@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Hr from "components/common/Hr/Hr";
-import Button from "components/Button/Button";
+import Button from "components/common/Button/Button";
 import { appStore, playStore, qr } from "assets";
 import classes from "./QrLogin.module.css";
 import ScanCode from "modals/ScanCode/ScanCode";

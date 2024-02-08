@@ -1,0 +1,75 @@
+@media screen and (max-width: 575px) {
+  .tableContainer {
+    overflow: auto;
+    width: calc(100vw - 40px);
+  }
+
+  .tableContainer::-webkit-scrollbar {
+    background-color: var(--base-200);
+    height: 5px;
+  }
+
+  .tableContainer::-webkit-scrollbar-thumb {
+    background-color: var(--base-300);
+    height: 5px;
+  }
+}
+
+.table {
+  width: 100%;
+  min-width: 500px;
+}
+
+.table thead th {
+  border-bottom: 1px solid var(--base-300);
+  font-size: 12px;
+  padding: 8px 0;
+  color: var(--base-100);
+  text-align: left;
+  font-weight: 400;
+}
+
+.table thead th:last-child {
+  text-align: right;
+}
+
+.table tbody tr td {
+  padding: 19px 0;
+  border-bottom: 1px solid var(--base-300);
+}
+
+.table tbody tr td .deviceInfo {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.table tbody tr td .deviceInfo h6 {
+  margin-bottom: 4px;
+  color: #fff;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.table tbody tr td .deviceInfo p {
+  font-weight: 400;
+  font-size: 14px;
+}
+
+.table tbody tr td .loginInfo p:first {
+  font-size: 12px;
+  font-weight: 400;
+  margin-bottom: 4px;
+}
+
+.table tbody tr td .logout {
+  color: var(--color-primary);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: right;
+  font-weight: 500;
+  font-size: 14px;
+  margin-left: auto;
+  display: block;
+}

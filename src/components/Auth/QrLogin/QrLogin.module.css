@@ -1,6 +1,6 @@
 .qrLogin {
   padding: 32px;
-  background-color: var(--color-bg-dark-3);
+  background-color: var(--base-400);
   border-radius: 20px;
   max-width: 402px;
 }
@@ -27,7 +27,7 @@
 }
 
 .qrLogin p {
-  color: var(--color-grey-text-light);
+  color: var(--base-100);
 }
 
 .qrLogin .download {
@@ -56,7 +56,7 @@
 }
 
 .qrLogin .download .left > .btn {
-  background: var(--color-bg-dark-2);
+  background: var(--base-300);
   box-shadow: var(--box-shadow-main);
   width: 80px;
   height: 48px;

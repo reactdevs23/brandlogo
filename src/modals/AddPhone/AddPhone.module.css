@@ -1,0 +1,24 @@
+.text {
+  text-align: center;
+}
+
+.text .title {
+  margin-bottom: 12px;
+}
+
+.inputContainer {
+  margin: 32px 0 24px;
+}
+
+.inputContainer label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--base-100);
+  font-weight: 500;
+  font-size: 14px;
+}
+
+.btnContainer {
+  display: flex;
+  justify-content: flex-end;
+}

@@ -1,0 +1,56 @@
+.privacySettings a {
+  color: var(--color-primary);
+  text-decoration: underline;
+}
+
+.privacySettings a:hover {
+  text-decoration: none;
+}
+
+.cards {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--base-400);
+  border: 1px solid var(--base-300);
+  border-radius: 16px;
+  padding: 20px;
+  gap: 60px;
+}
+
+@media screen and (max-width: 575px) {
+  .card {
+    gap: 10px;
+  }
+}
+
+.card .title {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.card p {
+  font-size: 14px;
+  color: var(--base-100);
+  font-weight: 400;
+}
+
+.standaloneSwitch {
+  color: var(--base-50);
+  font-weight: 500;
+  font-size: 14px;
+  gap: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding: 16px 0;
+  margin-top: 12px;
+}

@@ -4,7 +4,6 @@ import { qrCode } from "assets";
 import classes from "./ScanCode.module.css";
 
 const ScanCode = ({ isActive, onClose }) => {
-  console.log(isActive);
   return (
     <Modal
       className={classes.scanModal}
