@@ -101,6 +101,12 @@ const MainLayout = ({ authenticated }) => {
         </div>
         <div className={clsx(classes.mainRightSm)}>
           <div className={clsx(classes.independentBtns)}>
+            {" "}
+            {authenticated && (
+              <Button iconBtn size="sm" btnBlack>
+                <img src={navNotifications} alt="notifications" />
+              </Button>
+            )}
             <div ref={dropdown2Ref}>
               <LanguageDropdown
                 isActive={isDropdownActive}
@@ -121,10 +127,18 @@ const MainLayout = ({ authenticated }) => {
                 </Button>
               </LanguageDropdown>
             </div>
-
             <Button iconBtn size="sm" btnBlack>
               <img src={download} alt="download" />
             </Button>
+            {authenticated && (
+              <>
+                <Button iconBtn size="sm" btnBlack>
+                  <img src={help} alt="help" />
+                </Button>
+
+                <img className={classes.avatar} src={avatar} alt="avatar" />
+              </>
+            )}
           </div>{" "}
           <img
             onClick={() => setIsMenuActive(true)}
