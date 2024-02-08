@@ -39,7 +39,7 @@ const Dropdown = ({
   return (
     <div
       className={clsx(classes.dropdown, className)}
-      onClick={() => setIsActive(!isActive)}
+      onClick={() => setIsActive(true)}
       ref={dropdownRef}
     >
       {children}
